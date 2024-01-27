@@ -1,3 +1,6 @@
+
+# swg-evolve-expertise-calculator
+
 # Dependencies
 
 This project includes the following main dependencies:
@@ -63,3 +66,4 @@ Configure your PostgreSQL database connection details in the .env file or the re
 Once the server is running, you can access the application at the defined HOST and PORT in your .env file, typically <http://localhost:3000> for local development.
 
 Feel free to modify and adapt these steps as needed for your specific setup and requirements
+>>>>>>> master
