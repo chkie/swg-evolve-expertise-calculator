@@ -1,4 +1,4 @@
-## Dependencies
+# Dependencies
 
 This project includes the following main dependencies:
 
@@ -14,23 +14,34 @@ Development Dependencies:
 
 To get started with this project, follow these steps:
 
-1. **Clone the Repository:**
+## Clone the Repository
 
-   ```bash
-   git clone [repository-url]
-   cd [repository-directory]
+```bash
+git clone [https://github.com/chkie/swg-evolve-expertise-calculator.git]
+```
 
-2. Install Dependencies:
+   or
+
+```bash
+git clone [git@github.com:chkie/swg-evolve-expertise-calculator.git]
+
+cd [repository-directory]
+```
+
+### Install Dependencies
+
 Install all necessary packages using npm:
 
 ```bash
 npm install
 ```
 
-3. Environment Variables:
+### Environment Variables
+
 Ensure you have a .env file in your project root with all the required environment settings. This file is used by the dotenv package.
 
-4. Start the Server:
+### Start the Server
+
 For development, you can use nodemon for hot reloads
 
 ```bash
@@ -43,12 +54,12 @@ For a standard start, use:
 npm start
 ```
 
-5. Database Configuration:
+### Database Configuration
+
 Configure your PostgreSQL database connection details in the .env file or the relevant configuration file in your project. The pg package is used for database interactions.
 
-6. Verify Installation:
-Once the server is running, you can access the application at the defined HOST and PORT in your .env file, typically http://localhost:3000 for local development.
+### Verify Installation
+
+Once the server is running, you can access the application at the defined HOST and PORT in your .env file, typically <http://localhost:3000> for local development.
 
 Feel free to modify and adapt these steps as needed for your specific setup and requirements
-
-
