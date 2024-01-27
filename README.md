@@ -1,6 +1,6 @@
-<<<<<<< HEAD
+
 # swg-evolve-expertise-calculator
-=======
+
 # Dependencies
 
 This project includes the following main dependencies:
