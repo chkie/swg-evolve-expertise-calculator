@@ -29,25 +29,24 @@ app.get('/testdb', async (req, res) => {
 });
 
 app.get('/skills', async (req, res) => {
-    try {
-      const queryResult = await pool.query('SELECT * FROM skills');
-      res.json(queryResult.rows);
-    } catch (err) {
-      console.error(err);
-      res.status(500).send('Ein Fehler ist aufgetreten');
-    }
-  });
+  try {
+    const queryResult = await pool.query('SELECT * FROM skills');
+    res.json(queryResult.rows);
+  } catch (err) {
+    console.error(err);
+    res.status(500).send('Ein Fehler ist aufgetreten');
+  }
+});
 
-  app.get('/professions', async (req, res) => {
-    try {
-      const queryResult = await pool.query('SELECT * FROM professions');
-      res.json(queryResult.rows);
-    } catch (err) {
-      console.error(err);
-      res.status(500).send('Ein Fehler ist aufgetreten');
-    }
-  });
-  
+app.get('/professions', async (req, res) => {
+  try {
+    const queryResult = await pool.query('SELECT * FROM professions');
+    res.json(queryResult.rows);
+  } catch (err) {
+    console.error(err);
+    res.status(500).send('Ein Fehler ist aufgetreten');
+  }
+});
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
