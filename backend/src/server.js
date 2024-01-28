@@ -1,15 +1,14 @@
-require('dotenv').config(); // Lädt Umgebungsvariablen aus der .env-Datei
-
 const express = require('express');
+const config = require('config');
 const { Pool } = require('pg'); // Importiert das Pool-Modul aus dem pg-Paket
 
 // Konfiguriert den Pool mit den Daten aus der .env-Datei
 const pool = new Pool({
-  user: process.env.DB_USER,
-  host: process.env.DB_HOST,
-  database: process.env.DB_DATABASE,
-  password: process.env.DB_PASSWORD,
-  port: process.env.DB_PORT,
+  user: config.get('pg.username'),
+  host: config.get('pg.host'),
+  database: config.get('pg.database'),
+  password: config.get('pg.password'),
+  port: config.get('pg.port'),
 });
 
 const app = express();
@@ -34,6 +33,8 @@ app.get('/skills', async (req, res) => {
     res.json(queryResult.rows);
   } catch (err) {
     console.error(err);
+    console.error(err.message);
+    res.send("error :/")
     res.status(500).send('Ein Fehler ist aufgetreten');
   }
 });
